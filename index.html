@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traductor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Traductor</h1>
+
+    <!-- Input de palabra y opciones de idioma -->
+    <label for="word">Palabra / Word</label>
+    <input type="text" id="word" placeholder="Escribe una palabra...">
+
+    <div class="language-options">
+        <label><input type="radio" name="language" id="english"> Inglés</label>
+        <label><input type="radio" name="language" id="espanol"> Español</label>
+    </div>
+
+    <button type="button" class="translate-button">Traducir / Translate</button>
+
+    <div class="response">
+        <p>Response / Respuesta</p>
+    </div>
+
+    <!-- Categorías -->
+    <h2>Categorías</h2>
+    <div class="categories">
+        <label><input type="radio" name="category" id="animals"> Animales</label>
+        <label><input type="radio" name="category" id="fruits"> Frutas</label>
+        <label><input type="radio" name="category" id="colors"> Colores</label>
+        <label><input type="radio" name="category" id="physical_descriptions"> Descripciones</label>
+        <label><input type="radio" name="category" id="skills"> Habilidades</label>
+        <label><input type="radio" name="category" id="verbs"> Verbos</label>
+    </div>
+
+    <div class="word-list">
+        <p>Aquí va la lista de palabras</p>
+    </div>
+
+    <!-- Formulario para agregar palabras -->
+    <div class="form">
+        <form id="AddWordForm">
+            <h2>Agregar nueva palabra</h2>
+            <label for="word-english">Palabra en inglés:</label>
+            <input type="text" name="word-english" id="word-english" required>
+            
+            <label for="word-spanish">Traducción al español:</label>
+            <input type="text" name="word-spanish" id="word-spanish" required>
+            
+            <label for="example">Un ejemplo de uso de la palabra:</label>
+            <input type="text" name="example" id="example" placeholder="en inglés o español" required>
+
+            <label for="category-select">Selecciona una categoria:</label>
+            <div class="category-options">
+                <label><input type="radio" name="category-select" value="animals" > Animales</label>
+                <label><input type="radio" name="category-select" value="fruits"> Frutas</label>
+                <label><input type="radio" name="category-select" value="colors"> Colores</label>
+                <label><input type="radio" name="category-select" value="physical_descriptions"> Descripciones</label>
+                <label><input type="radio" name="category-select" value="skills"> Habilidades</label>
+                <label><input type="radio" name="category-select" value="verbs"> Verbos</label>
+            </div>
+        
+            <button type="submit" class="new-word-button">Agregar nueva palabra</button>
+        </form>
+    </div>
+</div>
+
+<script src="dictionary.js" type="module"></script>
+<script src="app.js" type="module"></script>
+
+</body>
+</html>

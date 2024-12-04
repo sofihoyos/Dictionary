@@ -1,0 +1,224 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f6f3ff; /* Fondo suave lila */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    flex-direction: column;
+  }
+  
+  /* Contenedor principal */
+  .container {
+    width: 90%;
+    max-width: 900px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Título principal */
+  h1 {
+    text-align: center;
+    color: #4c3c92; /* Lila oscuro */
+    font-size: 2.2em;
+    margin-bottom: 20px;
+  }
+  
+  /* Estilo para inputs de texto */
+  input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1em;
+    background-color: #f7f4ff; /* Fondo lila claro */
+  }
+  
+  input[type="text"]:focus {
+    outline: none;
+    border-color: #8e67d3; /* Lila medio para el borde al hacer focus */
+  }
+  
+  /* Opciones de idioma */
+  .language-options {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .language-options label {
+    font-size: 1.1em;
+    margin: 0 15px;
+    cursor: pointer;
+    color: #4c3c92; /* Lila oscuro */
+  }
+  
+  .language-options input[type="radio"] {
+    margin-right: 5px;
+  }
+  
+  /* Botón de traducir */
+  .translate-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #8e67d3; /* Lila brillante */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .translate-button:hover {
+    background-color: #6a48a3; /* Lila más oscuro para hover */
+  }
+  
+  /* Respuesta */
+  .response {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f3e8ff; /* Fondo lila suave */
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1.2em;
+    color: #4c3c92; /* Lila oscuro */
+  }
+  
+  /* Categorías */
+  h2 {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 1.6em;
+    color: #4c3c92; /* Lila oscuro */
+  }
+  
+  .categories {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+  
+  .categories label {
+    background-color: #f7f4ff;
+    padding: 12px 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 1.1em;
+    color: #4c3c92; /* Lila oscuro */
+  }
+  
+  .categories input[type="radio"] {
+    display: none; /* Ocultar los radio buttons reales */
+  }
+  
+  .categories label:hover {
+    background-color: #e0e0e0;
+    transform: scale(1.05);
+  }
+  
+  .categories input[type="radio"]:checked + label {
+    background-color: #8e67d3; /* Lila brillante */
+    color: white;
+  }
+  
+  /* Lista de palabras */
+  .word-list {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    text-align: left;
+    font-size: 1.1em;
+    color: #4c3c92;
+  }
+  
+  /* Formulario Agregar nueva palabra */
+  #AddWordForm {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 450px;
+    text-align: center;
+    margin-top: 30px;
+    margin-left: auto; /* Para centrar en el eje horizontal */
+    margin-right: auto; /* Para centrar en el eje horizontal */
+  }
+  
+  /* Título del formulario */
+  #AddWordForm h2 {
+    font-size: 1.6em;
+    color: #4c3c92; /* Lila oscuro */
+    margin-bottom: 20px;
+  }
+  
+  /* Etiquetas del formulario */
+  #AddWordForm label {
+    font-size: 1.1em;
+    margin: 10px 10px;
+    display: block;
+    color: #4c3c92;
+  }
+  
+  /* Estilo para los inputs dentro del formulario */
+  #AddWordForm input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f7f4ff;
+  }
+  
+  .category-options label {
+    background-color: #f7f4ff;
+    padding: 12px 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 1.1em;
+    color: #4c3c92; /* Lila oscuro */
+  }
+  
+  .category-options input[type="radio"] {
+    display: none; /* Ocultar los radio buttons reales */
+  }
+  
+  .category-options label:hover {
+    background-color: #e0e0e0;
+    transform: scale(1.05);
+  }
+  
+  .category-options input[type="radio"]:checked + label {
+    background-color: #8e67d3; /* Lila brillante */
+    color: white;
+  }
+  
+  /* Botón de agregar nueva palabra */
+  #AddWordForm button {
+    width: 100%;
+    padding: 12px;
+    background-color: #8e67d3;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  #AddWordForm button:hover {
+    background-color: #6a48a3; /* Lila más oscuro para hover */
+  }
