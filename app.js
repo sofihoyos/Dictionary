@@ -26,26 +26,6 @@ document.querySelector('.translate-button').addEventListener('click', () => {
     responseDiv.innerHTML = translation ? `<p>${translation}</p>` : `<p>Palabra no encontrada.</p>`;
 });
 
-// Mostrar palabras ordenadas alfabéticamente
-document.querySelectorAll('.categories input[type="radio"]').forEach(categoryRadio => {
-    categoryRadio.addEventListener('change', () => {
-        const selectedCategory = categoryRadio.id;
-        const wordListDiv = document.querySelector('.word-list');
-
-        if (dictionary.categories[selectedCategory]) {
-            const sortedWords = [...dictionary.categories[selectedCategory]].sort((a, b) =>
-                a.spanish.localeCompare(b.spanish, 'es', { sensitivity: 'base' })
-            );
-
-            const wordList = sortedWords
-                .map(word => `<li>${word.spanish} - ${word.english}: <em>${word.example}</em></li>`)
-                .join('');
-            wordListDiv.innerHTML = `<ul>${wordList}</ul>`;
-        } else {
-            wordListDiv.innerHTML = `<p>No hay palabras en esta categoría.</p>`;
-        }
-    });
-});
 
 // Agregar nuevas palabras
 document.querySelector('.new-word-button').addEventListener('click', (event) => {
